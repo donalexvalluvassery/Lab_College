@@ -19,7 +19,7 @@ int main()
         printf("\nEnter number of resources: ");
         scanf("%d", &resources);
  
-        printf("\nEnter Claim Vector:");
+        printf("\nEnter Available Table:");
         for (i = 0; i < resources; i++) 
     { 
             scanf("%d", &maxres[i]);
@@ -34,7 +34,7 @@ int main()
             }
         }
  
-        printf("\nEnter Maximum Claim Table:\n");
+        printf("\nEnter Maximum  Table:\n");
         for (i = 0; i < processes; i++) 
     {
             for(j = 0; j < resources; j++) 
@@ -43,7 +43,7 @@ int main()
             }
         }
  
-    printf("\nThe Claim Vector is: ");
+    printf("\nThe Available Vector is: ");
         for (i = 0; i < resources; i++) 
     {
             printf("\t%d", maxres[i]);
@@ -59,7 +59,7 @@ int main()
         printf("\n");
         }
  
-        printf("\nThe Maximum Claim Table:\n");
+        printf("\nThe Maximum Table:\n");
         for (i = 0; i < processes; i++) 
     {
             for (j = 0; j < resources; j++) 

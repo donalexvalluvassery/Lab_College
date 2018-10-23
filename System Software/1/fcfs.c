@@ -4,7 +4,7 @@ void findturn(int n,int wait[],int burst[],int turn[]){
 	int i;
 	printf("Process   Waiting Time   Burst Time   Turnaround Time \n");
 	for(i=0;i<n;i++){
-		turn[i]=burst[i]+turn[i];
+		turn[i]=burst[i]+wait[i];
 		printf("%d         %d               %d               %d \n",i+1,wait[i],burst[i],turn[i]);
 	}
 }

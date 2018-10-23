@@ -1,39 +1,66 @@
 #include<stdio.h>
 
-void findturn(int n,int wait[],int burst[],int turn[]){
-	int i;
-	printf("Process   Waiting Time   Burst Time   Turnaround Time \n");
-	for(i=0;i<n;i++){
-		turn[i]=burst[i]+wait[i];
-		printf("%d         %d               %d               %d \n",i+1,wait[i],burst[i],turn[i]);
-	}
-}
-void findwait(int n,int wait[],int burst[],int turn[]){
-	int i;
-	wait[0]=0;
-	for(i=1;i<n;i++)
-		wait[i]=burst[i-1]+wait[i-1];
-	findturn(n,wait,burst,turn);
-}
-
-void main()
+int main()
 {
-	int i,n,wait[10],burst[10],turn[10],pty[10],temp;
-	printf("Enter the number of processes \n");
-	scanf("%d",&n);
-	for(i=0;i<n;i++)
-	{
-		printf("Enter the burst time of process %d \n",i+1);
-		scanf("%d",&burst[i]);
-			
-	}
-	for(i=0;i<n;i++)
-	{
-		printf("Enter priority of process %d \n",i+1);
-		scanf("%d",&pty[i]);
-			temp = burst[pty[i]];
-			burst[pty[i]]= burst[i];
-			burst[i]=temp;
-	}
-	findwait(n,wait,burst,turn);
+    int bt[20],p[20],wt[20],tat[20],pr[20],i,j,n,total=0,pos,temp,avg_wt,avg_tat;
+    printf("Enter Total Number of Process:");
+    scanf("%d",&n);
+
+    printf("\nEnter Burst Time and Priority\n");
+    for(i=0;i<n;i++)
+    {
+        printf("\nP[%d]\n",i+1);
+        printf("Burst Time:");
+        scanf("%d",&bt[i]);
+        printf("Priority:");
+        scanf("%d",&pr[i]);
+        p[i]=i+1;
+    }
+
+
+    for(i=0;i<n;i++)
+    {
+        pos=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(pr[j]<pr[pos])
+                pos=j;
+        }
+
+        temp=pr[i];
+        pr[i]=pr[pos];
+        pr[pos]=temp;
+
+        temp=bt[i];
+        bt[i]=bt[pos];
+        bt[pos]=temp;
+
+        temp=p[i];
+        p[i]=p[pos];
+        p[pos]=temp;
+    }
+
+    wt[0]=0;
+
+    for(i=1;i<n;i++)
+    {
+        wt[i]=0;
+        for(j=0;j<i;j++)
+            wt[i]+=bt[j];
+
+        total+=wt[i];
+    }
+
+    avg_wt=total/n;
+    total=0;
+
+    printf("\nProcess\t    Burst Time    \tWaiting Time\tTurnaround Time");
+    for(i=0;i<n;i++)
+    {
+        tat[i]=bt[i]+wt[i];
+        total+=tat[i];
+        printf("\nP[%d]\t\t  %d\t\t    %d\t\t\t%d",p[i],bt[i],wt[i],tat[i]);
+    }
+
+    return 0;
 }

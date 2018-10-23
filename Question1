@@ -1,0 +1,32 @@
+All have to complete the lab cycle one with in next two labs.
+
+
+lab cycle 1
+
+1) Familiarization of DDL statements
+
+2) Familiarization of DML statements
+
+3) Implement Relationship between database
+     
+  (i) one to one
+  (ii) one to many
+  (iii) many to many
+
+4) Create database to set various constraints.
+
+5)Implementation of Views and assertions
+
+6) Implementation of Build in Functions in RDBMS( include numeric function,string function and date and time function...)
+
+7) Implementation of various aggregate functions in SQL
+
+8) Implementation of Order By, Group by & Having clause
+
+9) Implementation of Set operators( UNION,UNION ALL,INTERSECT,MINUS)  ,nested queries and join queries (CROSS JOIN,INNER JOIN,OUTER JOIN,LEFT JOIN,RIGHT JOIN)
+
+
+Regards,
+Anjali S
+Assistant Professor in CSE
+MEC
