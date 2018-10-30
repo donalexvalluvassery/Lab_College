@@ -10,7 +10,7 @@ int i,ch;
 char f[30];
 clrscr();
 dir.fcnt = 0;
-printf("\nEnter name of directory -- ");
+printf("\nEnter name of directory -- :");
 scanf("%s", dir.dname);
 while(1)
 {
