@@ -9,7 +9,7 @@ int z=0;
 
 int keyword(char x[]){
 	int flag=0;
-	char keywords[32][20]={"auto","break","case","char","const","continue","default",
+	char keywords[34][25]={"auto","break","case","char","const","continue","default",
 							"do","double","else","enum","extern","float","for","goto",
 							"if","int","long","register","return","short","signed",
 							"sizeof","static","struct","switch","typedef","union",
