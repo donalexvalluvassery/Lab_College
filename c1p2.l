@@ -6,10 +6,10 @@
 
 %%
 [+-/=*%] {if(isfound(yytext)){
-			printf("%s is an operator \n",yytext);	}
+			printf("%s is an Operator \n",yytext);	}
 		 }
 [{};,()"] {if(isfound(yytext)){
-			printf("%s is a seperator \n",yytext);}
+			printf("%s is a Seperator \n",yytext);}
 			}
 auto|break|case|char|const|continue|default|do|double|else|enum|extern|float|for|goto|if|int|long|register|return|short|signed|sizeof|static|struct|switch|typedef|union|unsigned|void|volatile|while {
 if(isfound(yytext)){
@@ -17,7 +17,7 @@ if(isfound(yytext)){
 	}		 
 ([a-zA-Z][0-9])+|[a-zA-Z]* {
 if(isfound(yytext)){
-	printf("%s is an identifier \n",yytext);}
+	printf("%s is an Identifier \n",yytext);}
 }	
 [0-9]+ {
 if(isfound(yytext)){
