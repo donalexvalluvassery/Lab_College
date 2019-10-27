@@ -42,7 +42,7 @@ int isfound(char x[])
 }
 int main()
 {
-	char found[100];
+	char found[200];
 	FILE *fptr;
 	fptr=fopen("input.txt","r");
 	yyin=fptr;
