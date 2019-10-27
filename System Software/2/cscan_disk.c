@@ -8,13 +8,13 @@ int main(){
   int queue[20], q_size, head, i,j, seek=0, diff, max, temp, queue1[20], queue2[20], temp1=0, temp2=0;
   float avg;
 
-  printf("%s\t", "Input no of disk locations");
+  printf("%s\t", "Input number of disk locations:");
   scanf("%d", &q_size);
 
-  printf("%s\t", "Enter initial head position");
+  printf("%s\t", "Enter initial head position:");
   scanf("%d", &head);
 
-  printf("%s\n","Enter disk positions to be read");
+  printf("%s\n","Enter disk positions to be read:");
   for(i=0; i<q_size; i++) {
 
     scanf("%d", &temp);
