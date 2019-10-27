@@ -4,7 +4,7 @@
 
 char fbuf[40][100];
 int y=0;
-char fb[7];
+char fb[10];
 int z=0;
 
 int keyword(char x[]){
