@@ -35,12 +35,12 @@ void findwait(int n,int wait[],int burst[],int turn[],int p[]){
 void main()
 {
 	int p[10],i,n,wait[10],burst[10],turn[10];
-	printf("Enter the number of processes \n");
+	printf("Enter the number of processes  \n");
 	scanf("%d",&n);
 	for(i=0;i<n;i++)
 	{
 		p[i]=i+1;
-		printf("Enter the burst time of process %d \n",i+1);
+		printf("Enter the burst time of process  %d \n",i+1);
 		scanf("%d",&burst[i]);
 	}
 	sort(burst,n,p);
