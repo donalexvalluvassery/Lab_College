@@ -19,9 +19,9 @@ lab cycle 1
 
 6) Implementation of Build in Functions in RDBMS( include numeric function,string function and date and time function...)
 
-7) Implementation of various aggregate functions in SQL
+7) Implementation of various aggregate functions in SQL.
 
-8) Implementation of Order By, Group by & Having clause
+8) Implementation of Order By, Group by & Having clause.
 
 9) Implementation of Set operators( UNION,UNION ALL,INTERSECT,MINUS)  ,nested queries and join queries (CROSS JOIN,INNER JOIN,OUTER JOIN,LEFT JOIN,RIGHT JOIN)
 
